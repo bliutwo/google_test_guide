@@ -10,11 +10,17 @@ Although the [Googletest Primer](https://github.com/google/googletest/blob/maste
 
 Here are some steps for incorporating Google Unit Testing into a basic project:
 
-1. Download these two files to the directory that has your source code:
+1. Modify your source file to include the following header (for example, in `tests.cc`):
+   
+   ```cpp
+   #include "gtest/gtest.h"
+   ```
+
+2. Download these two files to the directory that has your source code:
    - [`CMakeLists.txt`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt)
    - [`CMakeLists.txt.in`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt.in)
    - (You can save these files by right-clicking the page and clicking `Save Page As...`)
-2. In `CMakeLists.txt`, modify the last three lines to contain the executables and source files that you want. For example, if you want to make an executable called `runtests`, and your source file is `tests.cc`, you can change the last lines in `CMakeLists.txt` from this:
+3. In `CMakeLists.txt`, modify the last three lines to contain the executables and source files that you want. For example, if you want to make an executable called `runtests`, and your source file is `tests.cc`, you can change the last lines in `CMakeLists.txt` from this:
 
    ```cmake
    # Now simply link against gtest or gtest_main as needed. Eg
@@ -32,7 +38,7 @@ Here are some steps for incorporating Google Unit Testing into a basic project:
    add_test(NAME example_test COMMAND runtests)
    ```
 
-3. Once you've done that, you can run the following commands (requires [`cmake`](https://cmake.org/) and [`make`](https://wiki.ubuntu.com/ubuntu-make)):
+4. Once you've done that, you can run the following commands (requires [`cmake`](https://cmake.org/) and [`make`](https://wiki.ubuntu.com/ubuntu-make)):
    
    ```bash
    $ cmake .
