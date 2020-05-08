@@ -56,7 +56,7 @@ Here are some steps for incorporating Google Unit Testing into a basic project:
 
 That's it! I wish somewhere it was said to do that when I was figuring this out, so hopefully this can serve that purpose for others.
 
-## Running the example test from this directory
+## Running the example test from this repository
 
 The commands for running the example code in this directory are the following:
 
