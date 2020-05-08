@@ -16,7 +16,7 @@ Here are some steps for incorporating Google Unit Testing into a basic project:
    #include "gtest/gtest.h"
    ```
 
-2. Download these two files to the directory that has your source code:
+2. Download these two files to the same directory as your source file:
    - [`CMakeLists.txt`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt)
    - [`CMakeLists.txt.in`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt.in)
    - (You can save these files by right-clicking the page and clicking `Save Page As...`)
