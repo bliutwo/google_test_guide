@@ -11,9 +11,10 @@ Although the [Googletest Primer](https://github.com/google/googletest/blob/maste
 Here are some steps for incorporating Google Unit Testing into a basic project:
 
 1. Download these two files to the directory that has your source code:
-   - [`CMakeLists.txt`]()
-   - [`CMakeLists.txt.in`]()
-2. In `CMakeLists.txt`, modify the last two lines to contain the executables and source files that you want. For example, if you want to make an executable called `runtests`, and your source file is `tests.cc`, you can change the last lines in `CMakeLists.txt` from this:
+   - [`CMakeLists.txt`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt)
+   - [`CMakeLists.txt.in`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt.in)
+   - (You can save these files by right-clicking the page and clicking `Save Page As...`)
+2. In `CMakeLists.txt`, modify the last three lines to contain the executables and source files that you want. For example, if you want to make an executable called `runtests`, and your source file is `tests.cc`, you can change the last lines in `CMakeLists.txt` from this:
 
 ```cmake
 # Now simply link against gtest or gtest_main as needed. Eg
@@ -26,10 +27,28 @@ to this:
 
 ```cmake
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(example example.cpp)
-target_link_libraries(example gtest_main)
-add_test(NAME example_test COMMAND example)
+add_executable(runtests tests.cc)
+target_link_libraries(runtests gtest_main)
+add_test(NAME example_test COMMAND runtests)
 ```
+
+3. Once you've done that, you can run the following commands (requires [`cmake`](https://cmake.org/) and [`make`](https://wiki.ubuntu.com/ubuntu-make)):
+
+```bash
+$ cmake .
+```
+
+```bash
+$ make
+```
+
+If your executable were `runtests` as mentioned above, you can run:
+
+```bash
+$ ./runtests
+```
+
+That's it! I wish somewhere it was said to do that when I was figuring this out, so hopefully this can serve that purpose for others.
 
 ## Running the example test from this directory
 
@@ -43,6 +62,6 @@ $ cmake .
 $ make
 ```
 
-That's it! I wish somewhere it was said to do that. Glad I finally
-figured it out, though.
-
+```bash
+$ ./example
+```
