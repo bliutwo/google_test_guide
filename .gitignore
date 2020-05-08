@@ -1,0 +1,13 @@
+*.out
+*.sh
+*.exe
+CMakeCache.txt
+CMakeFiles/
+Makefile
+bin/
+*.cmake
+example
+googletest-build/
+googletest-download/
+googletest-src/
+lib/
