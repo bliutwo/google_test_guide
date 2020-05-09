@@ -22,6 +22,15 @@ Here are some steps for incorporating Google Unit Testing (or Mocking) into a ba
    #include "gmock/gmock.h"
    ```
 
+   **Additional setup for mocking:** Make sure certain lines to your `main()` function as such:
+
+   ```cpp
+   int main(int argc, char** argv) {
+       ::testing::InitGoogleMock(&argc, argv);
+       // Unit test as usual, Google Mock is initialized
+   }
+   ```
+
 2. Download these two files to the same directory as your source file:
    - [`CMakeLists.txt`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt)
    - [`CMakeLists.txt.in`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt.in)
