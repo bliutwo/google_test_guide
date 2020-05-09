@@ -1,6 +1,6 @@
 # Instructions for Google C++ Testing and Mocking (For Dummies), Unix Edition
 
-Keywords: quickstart, quick, start, dummies, easy, guide, test, mock
+Keywords: quickstart, quick, start, dummies, easy, guide, test, mock, google
 
 ## Motivation
 
