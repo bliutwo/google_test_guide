@@ -35,7 +35,7 @@ Here are some steps for incorporating Google Unit Testing (or Mocking) into a ba
    add_test(NAME example_test COMMAND example)
    ```
    
-   to this:
+   to this, for testing:
    
    ```cmake
    # Now simply link against gtest or gtest_main as needed. Eg
