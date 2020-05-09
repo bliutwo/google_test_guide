@@ -1,6 +1,6 @@
-# Instructions for Google C++ Testing (For Dummies), Unix Edition
+# Instructions for Google C++ Testing and Mocking (For Dummies), Unix Edition
 
-Keywords: quickstart, quick, start, dummies, easy, guide
+Keywords: quickstart, quick, start, dummies, easy, guide, test, mock
 
 ## Motivation
 
@@ -8,12 +8,18 @@ Although the [Googletest Primer](https://github.com/google/googletest/blob/maste
 
 ## Generalized Instructions
 
-Here are some steps for incorporating Google Unit Testing into a basic project:
+Here are some steps for incorporating Google Unit Testing (or Mocking) into a basic project:
 
 1. Modify your source file to include the following header (for example, in `tests.cc`):
    
    ```cpp
    #include "gtest/gtest.h"
+   ```
+   
+   Similarly, for mocking, include this instead:
+
+   ```cpp
+   #include "gmock/gmock.h"
    ```
 
 2. Download these two files to the same directory as your source file:
@@ -37,6 +43,17 @@ Here are some steps for incorporating Google Unit Testing into a basic project:
    target_link_libraries(runtests gtest_main)
    add_test(NAME example_test COMMAND runtests)
    ```
+
+   Similarly, for mocking, you can change it to this:
+
+   ```cmake
+   # Now simply link against gtest or gtest_main as needed. Eg
+   add_executable(runtests tests.cc)
+   target_link_libraries(runtests gmock_main)
+   # add_test(NAME example_test COMMAND runtests)
+   ```
+
+   NOTE: I'm not absolutely certain the last line in either example is necessary.
 
 4. Once you've done that, you can run the following commands (requires [`cmake`](https://cmake.org/) and [`make`](https://wiki.ubuntu.com/ubuntu-make)):
    
