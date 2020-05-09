@@ -2,13 +2,6 @@
 
 Keywords: quickstart, quick, start, dummies, easy, guide, test, mock, google
 
-### Table of Contents
-
-- [Motivation](#motivation)
-- [Generalized Instructions](#generalized-instructions)
-- [Running this repo's examples](#running-the-example-test-from-this-repository)
-- [More examples](#more-examples)
-
 ## Motivation
 
 Although the [Googletest Primer](https://github.com/google/googletest/blob/master/googletest/docs/primer.md#googletest-primer) and the [Googletest README](https://github.com/google/googletest/blob/master/googletest/README.md#incorporating-into-an-existing-cmake-project) are enlightening and informative, they don't contain a step-by-step, "quick start" guide to incorporating the Google C++ testing or mocking frameworks into an existing project. Hopefully, this repository can help people get quickly started with it.
