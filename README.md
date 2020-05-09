@@ -31,6 +31,16 @@ Here are some steps for incorporating Google Unit Testing (or Mocking) into a ba
    }
    ```
 
+   And, if you want Google Mock to throw an exception when some mock-related assertion fails, add `::testing::GTEST_FLAG(throw_on_failure) = true;` as such:
+
+   ```cpp
+   int main(int argc, char** argv) {
+       ::testing::GTEST_FLAG(throw_on_failure) = true;
+       ::testing::InitGoogleMock(&argc, argv);
+       // Unit test as usual, Google Mock is initialized
+   }
+   ```
+
 2. Download these two files to the same directory as your source file:
    - [`CMakeLists.txt`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt)
    - [`CMakeLists.txt.in`](https://raw.githubusercontent.com/bliutwo/google_test_guide/master/CMakeLists.txt.in)
