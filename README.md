@@ -22,7 +22,7 @@ Here are some steps for incorporating Google Unit Testing (or Mocking) into a ba
    #include "gmock/gmock.h"
    ```
 
-   **Additional setup for mocking:** Make sure certain lines to your `main()` function as such:
+   **Additional setup for mocking:** Make sure to add `::testing::InitGoogleMock(&argc, argv` to your `main()` function as such:
 
    ```cpp
    int main(int argc, char** argv) {
