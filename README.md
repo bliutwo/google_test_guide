@@ -18,7 +18,7 @@ Here are some steps for incorporating Google Unit Testing (or Mocking) into a ba
    #include "gtest/gtest.h"
    ```
    
-   Similarly, for mocking, include this instead:
+   Similarly, for mocking, include this:
 
    ```cpp
    #include "gmock/gmock.h"
@@ -73,6 +73,17 @@ Here are some steps for incorporating Google Unit Testing (or Mocking) into a ba
    target_link_libraries(runtests gmock_main) # NOTE: gmock_main, NOT gtest_main!
    add_test(NAME example_test COMMAND runtests)
    ```
+
+   You can also link both libraries in the same file:
+
+   ```cmake
+   # Now simply link against gtest or gtest_main as needed. Eg
+   add_executable(runtests tests.cc)
+   target_link_libraries(runtests gmock_main)
+   target_link_libraries(runtests gtest_main) # NOTE: two lines!
+   add_test(NAME example_test COMMAND runtests)
+   ```
+
 
 4. Once you've done that, you can run the following commands (requires [`cmake`](https://cmake.org/) and [`make`](https://wiki.ubuntu.com/ubuntu-make)):
    
