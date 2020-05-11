@@ -123,3 +123,4 @@ $ ./example
 All of the following are from Josh Lospinoso's [C++ Crash Course: A Fast-Paced Introduction](https://smile.amazon.com/C-Crash-Course-Josh-Lospinoso/dp/1593278888):
 
 - [Google Test example](https://github.com/bliutwo/cpp_crash_course/blob/master/ch10/google_test.cc)
+- [Google Mock example](https://github.com/bliutwo/cpp_crash_course/blob/master/ch10/google_mock.cc) (In progress...)
