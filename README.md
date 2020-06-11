@@ -121,6 +121,7 @@ $ ./example
 ## More examples
 
 - [My own personal example](https://github.com/bliutwo/leetcode_sols/blob/master/flip_image.cc), a solution to a Leetcode problem
+- [Another example](https://github.com/bliutwo/leetcode_sols/blob/master/add_strings.cc), also a solution to a Leetcode problem
 
 All of the following are from Josh Lospinoso's [C++ Crash Course: A Fast-Paced Introduction](https://smile.amazon.com/C-Crash-Course-Josh-Lospinoso/dp/1593278888):
 
