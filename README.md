@@ -120,6 +120,7 @@ $ ./example
 
 ## More examples
 
+- [Google Test Template](https://github.com/bliutwo/leetcode_sols/blob/master/template_google_test.cc)
 - [My own personal example](https://github.com/bliutwo/leetcode_sols/blob/master/flip_image.cc), a solution to a Leetcode problem
 - [Another example](https://github.com/bliutwo/leetcode_sols/blob/master/add_strings.cc), also a solution to a Leetcode problem
 
